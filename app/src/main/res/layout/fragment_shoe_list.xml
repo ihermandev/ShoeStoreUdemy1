@@ -5,37 +5,38 @@
     tools:context=".presentation.onboarding.WelcomeFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/welcome_layout"
+        android:id="@+id/shoe_list_layout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="@color/colorPrimaryDark">
+        android:layout_height="match_parent">
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tvDisplayName"
-            style="@style/TextHeader"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/welcome"
-            android:textAlignment="center"
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/fragment_vertical_margin"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btnNext"
-            style="@style/ActionButton"
+            <LinearLayout
+                android:id="@+id/shoeContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"/>
+        </ScrollView>
+
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabAddShoe"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/fragment_horizontal_margin"
             android:layout_marginBottom="@dimen/fragment_vertical_margin"
-            android:drawableEnd="@drawable/ic_baseline_arrow_24"
-            android:paddingStart="8dp"
-            android:paddingEnd="1dp"
-            android:text="@string/next"
-            android:textStyle="bold"
+            android:contentDescription="@string/add_shoe_item_description"
+            android:src="@drawable/ic_add"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
