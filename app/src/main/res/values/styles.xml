@@ -16,4 +16,25 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <style name="TextHeader">
+        <item name="android:fontFamily">casual</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">26sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Auth screen -->
+    <style name="ActionButton">
+        <item name="android:background">@drawable/oval_btn_drawable</item>
+        <item name="android:textColor">@color/colorBtnText</item>
+    </style>
+
+    <style name="AuthEditField">
+        <item name="android:backgroundTint">@android:color/white</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:selectAllOnFocus">true</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textColorHint">@android:color/white</item>
+    </style>
+
 </resources>

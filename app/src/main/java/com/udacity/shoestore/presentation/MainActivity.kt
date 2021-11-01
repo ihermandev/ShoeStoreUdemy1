@@ -1,8 +1,8 @@
-package com.udacity.shoestore
+package com.udacity.shoestore.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import timber.log.Timber
+import com.udacity.shoestore.R
 
 class MainActivity : AppCompatActivity() {
 
