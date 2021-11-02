@@ -1,3 +1,34 @@
 <resources>
     <string name="app_name">ShoeStore</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="action_register">Create account</string>
+    <string name="logout">Logout</string>
+    <!-- Strings related to onboarding -->
+    <string name="welcome">John Doe, \nWelcome to the store!</string>
+    <string name="first_instruction">Check out the list \nof available shoes</string>
+    <string name="second_instruction">Add new shoes to the list \nusing fab button</string>
+    <string name="next">Next</string>
+    <string name="visit_shop">Visit shop</string>
+    <!-- Strings related to shoe listing -->
+    <string name="add_shoe_item_description">Add shoe item</string>
+    <string name="shoe_item_name">Name: %1$s</string>
+    <string name="shoe_item_desc">Description: %1$s</string>
+    <string name="shoe_item_size">Size: %1$s </string>
+    <string name="shoe_item_company">Company: %1$s</string>
+    <string name="scrollview_for_shoe_items">ScrollView for Shoe items</string>
+    <!-- Strings related to shoe detail -->
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="shoe_name_label">Shoe Name:</string>
+    <string name="company_label">Company:</string>
+    <string name="shoe_size_label">Shoe Size:</string>
+    <string name="description_label">Description:</string>
+    <string name="name_hint">name</string>
+    <string name="company_hint">company</string>
+    <string name="size_hint">39.0</string>
+    <string name="description_hint">description</string>
+
 </resources>

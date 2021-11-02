@@ -2,18 +2,37 @@
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
-    <style name="AppTheme.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
+
+    <style name="TextHeader">
+        <item name="android:fontFamily">casual</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">26sp</item>
+        <item name="android:textStyle">bold</item>
     </style>
 
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <!-- Auth screen -->
+    <style name="ActionButton">
+        <item name="android:background">@drawable/oval_btn_drawable</item>
+        <item name="android:textColor">@color/colorBtnText</item>
+    </style>
 
-    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="AuthEditField">
+        <item name="android:backgroundTint">@android:color/white</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:selectAllOnFocus">true</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textColorHint">@android:color/white</item>
+    </style>
+
+    <style name="ItemDetailTitle">
+        <item name="android:paddingStart">4dp</item>
+        <item name="android:paddingEnd">4dp</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textSize">16sp</item>
+    </style>
 
 </resources>
