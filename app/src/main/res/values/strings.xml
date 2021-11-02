@@ -21,5 +21,16 @@
     <string name="shoe_item_desc">Description: %1$s</string>
     <string name="shoe_item_size">Size: %1$s </string>
     <string name="shoe_item_company">Company: %1$s</string>
+    <!-- Strings related to shoe detail -->
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="shoe_name_label">Shoe Name:</string>
+    <string name="company_label">Company:</string>
+    <string name="shoe_size_label">Shoe Size:</string>
+    <string name="description_label">Description:</string>
+    <string name="name_hint">name</string>
+    <string name="company_hint">company</string>
+    <string name="size_hint">39.0</string>
+    <string name="description_hint">description</string>
 
 </resources>

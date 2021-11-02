@@ -18,7 +18,6 @@ import com.udacity.shoestore.databinding.FragmentShoeListBinding
 import com.udacity.shoestore.presentation.SharedViewModel
 import timber.log.Timber
 
-
 class ShoeListFragment : Fragment() {
 
     private val viewModel: SharedViewModel by lazy {

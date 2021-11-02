@@ -34,16 +34,14 @@
     <fragment
         android:id="@+id/onBoardingFragment"
         android:name="com.udacity.shoestore.presentation.onboarding.OnBoardingFragment"
-        android:label="OnBoardingFragment"
+        android:label="OnBoarding"
         tools:layout="@layout/fragment_on_boarding">
         <action
             android:id="@+id/action_onBoardingFragment_to_shoeListFragment"
             app:destination="@id/shoeListFragment"
-            app:enterAnim="@anim/slide_in_right"
-            app:exitAnim="@anim/slide_out_left"
+            app:enterAnim="@anim/drag_left"
+            app:exitAnim="@anim/drag_right"
             app:launchSingleTop="true"
-            app:popEnterAnim="@anim/slide_in_right"
-            app:popExitAnim="@anim/slide_out_left"
             app:popUpTo="@id/main_navigation"
             app:popUpToInclusive="true" />
     </fragment>
@@ -57,10 +55,8 @@
             app:destination="@id/shoeDetailFragment"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
-            app:launchSingleTop="true"
             app:popEnterAnim="@anim/slide_in_right"
-            app:popExitAnim="@anim/slide_out_left"
-            app:popUpToInclusive="true" />
+            app:popExitAnim="@anim/slide_out_left" />
         <action
             android:id="@+id/action_shoeListFragment_to_loginFragment"
             app:destination="@id/loginFragment" />

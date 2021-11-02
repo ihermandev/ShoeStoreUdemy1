@@ -5,6 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.udacity.shoestore.data.MockData
 import com.udacity.shoestore.data.models.Shoe
+import timber.log.Timber
 
 class SharedViewModel : ViewModel() {
 
@@ -22,15 +23,32 @@ class SharedViewModel : ViewModel() {
 
     fun onUserLoggedIn() {
         _isUserLoggedIn.postValue(true)
-        populateShoeList(MockData.listOfShoe)
+        //Check if shoe list is empty and populate it with data if needed
+        if (_shoeList.value.isNullOrEmpty()) {
+            populateShoeList(MockData.listOfShoe)
+        }
     }
 
     fun onUserLogOut() {
         _isUserLoggedIn.postValue(false)
     }
 
-    fun populateShoeList(data: List<Shoe>) {
+    private fun populateShoeList(data: List<Shoe>) {
         _shoeList.postValue(data)
     }
 
+    fun addShoeToList(shoe: Shoe) {
+        val oldList = _shoeList.value
+        val newList = oldList?.toMutableList()
+        newList?.let { list ->
+            //Add item at top of the list
+            list.add(0, shoe)
+            populateShoeList(list)
+        }
+    }
+
+    override fun onCleared() {
+        super.onCleared()
+        Timber.d("onCleared called")
+    }
 }

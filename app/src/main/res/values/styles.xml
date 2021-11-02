@@ -33,4 +33,11 @@
         <item name="android:textColorHint">@android:color/white</item>
     </style>
 
+    <style name="ItemDetailTitle">
+        <item name="android:paddingStart">4dp</item>
+        <item name="android:paddingEnd">4dp</item>
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
 </resources>

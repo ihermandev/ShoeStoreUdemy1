@@ -4,7 +4,6 @@ import androidx.lifecycle.ViewModel
 import com.udacity.shoestore.data.models.User
 import timber.log.Timber
 
-
 class LoginViewModel : ViewModel() {
 
     //TODO implement mock login

@@ -12,7 +12,6 @@ import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentOnBoardingBinding
 import com.udacity.shoestore.presentation.SharedViewModel
 
-
 class OnBoardingFragment : Fragment() {
 
     private val viewModel: SharedViewModel by lazy {
@@ -32,7 +31,8 @@ class OnBoardingFragment : Fragment() {
 
         binding.btnNext.setOnClickListener { view: View ->
             viewModel.onUserLoggedIn()
-            view.findNavController().navigate(OnBoardingFragmentDirections.actionOnBoardingFragmentToShoeListFragment())
+            view.findNavController()
+                .navigate(OnBoardingFragmentDirections.actionOnBoardingFragmentToShoeListFragment())
         }
 
         return binding.root

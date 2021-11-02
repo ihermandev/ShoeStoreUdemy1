@@ -11,7 +11,6 @@ import androidx.navigation.findNavController
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentLoginBinding
 
-
 class LoginFragment : Fragment() {
 
     private lateinit var loginViewModel: LoginViewModel
@@ -46,5 +45,4 @@ class LoginFragment : Fragment() {
         view.findNavController()
             .navigate(LoginFragmentDirections.actionLoginFragmentToWelcomeFragment())
     }
-
 }
