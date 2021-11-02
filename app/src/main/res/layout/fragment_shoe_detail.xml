@@ -5,7 +5,9 @@
     tools:context=".presentation.onboarding.WelcomeFragment">
 
     <data>
-        <import type="com.udacity.shoestore.utils.Converter"/>
+
+        <import type="com.udacity.shoestore.utils.Converter" />
+
         <variable
             name="shoeItem"
             type="com.udacity.shoestore.data.models.Shoe" />
@@ -57,9 +59,9 @@
                     android:id="@+id/etCompany"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:ems="10"
                     android:hint="@string/company_hint"
                     android:inputType="text"
-                    android:ems="10"
                     android:minHeight="48dp"
                     android:text="@={shoeItem.company}"
                     android:textColor="@color/colorPrimaryDark" />
@@ -74,10 +76,10 @@
                     android:id="@+id/etSize"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:ems="10"
                     android:hint="@string/size_hint"
                     android:inputType="numberDecimal"
                     android:minHeight="48dp"
-                    android:ems="10"
                     android:text="@={Converter.sizeToString(shoeItem.size)}"
                     android:textColor="@color/colorPrimaryDark" />
 
@@ -91,17 +93,14 @@
                     android:id="@+id/etDesc"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:ems="10"
                     android:hint="@string/description_hint"
                     android:inputType="text"
                     android:minHeight="48dp"
-                    android:ems="10"
                     android:text="@={shoeItem.description}"
                     android:textColor="@color/colorPrimaryDark" />
-
             </LinearLayout>
-
         </ScrollView>
-
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnSave"
@@ -127,7 +126,5 @@
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
-
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

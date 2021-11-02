@@ -5,9 +5,6 @@
     <string name="prompt_password">Password</string>
     <string name="action_sign_in">Sign in</string>
     <string name="action_register">Create account</string>
-    <string name="invalid_username">Not a valid username</string>
-    <string name="invalid_password">Password must be >5 characters</string>
-    <string name="login_failed">"Login failed"</string>
     <string name="logout">Logout</string>
     <!-- Strings related to onboarding -->
     <string name="welcome">John Doe, \nWelcome to the store!</string>
@@ -21,6 +18,7 @@
     <string name="shoe_item_desc">Description: %1$s</string>
     <string name="shoe_item_size">Size: %1$s </string>
     <string name="shoe_item_company">Company: %1$s</string>
+    <string name="scrollview_for_shoe_items">ScrollView for Shoe items</string>
     <!-- Strings related to shoe detail -->
     <string name="save">Save</string>
     <string name="cancel">Cancel</string>

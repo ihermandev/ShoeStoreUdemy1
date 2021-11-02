@@ -43,7 +43,6 @@ class ShoeDetailFragment : Fragment() {
         }
 
         binding.btnSave.setOnClickListener { view: View ->
-
             if (addShoeItem(binding)) {
                 view.findNavController()
                     .navigate(ShoeDetailFragmentDirections.actionShoeDetailFragmentToShoeListFragment())
@@ -56,6 +55,11 @@ class ShoeDetailFragment : Fragment() {
         return binding.root
     }
 
+    /**
+     * Method for adding shoe item to shoeList from SharedViewModel
+     * @param binding needed for two way binding observation
+     * @return boolean value depending on whether the item was added or not
+     */
     private fun addShoeItem(binding: FragmentShoeDetailBinding): Boolean {
         val name = binding.etName.text.toString()
         val company = binding.etCompany.text.toString()

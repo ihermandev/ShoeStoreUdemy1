@@ -8,7 +8,6 @@ import androidx.core.content.ContextCompat
 import androidx.core.view.setPadding
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
@@ -41,7 +40,7 @@ class ShoeListFragment : Fragment() {
             }
         })
 
-        viewModel.shoeList.observe(viewLifecycleOwner, Observer { list ->
+        viewModel.shoeList.observe(viewLifecycleOwner, { list ->
             Timber.i("Shoe list -> $list")
             list.forEach { shoe ->
                 addViewToList(shoe, binding)
@@ -71,6 +70,10 @@ class ShoeListFragment : Fragment() {
         return super.onOptionsItemSelected(item)
     }
 
+    /**
+     * Method for adding a child view programmatically to a LinearLayout.
+     * It was the project condition
+     */
     private fun addViewToList(item: Shoe, binding: FragmentShoeListBinding) {
         val layout = binding.shoeContainer
         val context = layout.context

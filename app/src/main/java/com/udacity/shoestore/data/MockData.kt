@@ -2,6 +2,9 @@ package com.udacity.shoestore.data
 
 import com.udacity.shoestore.data.models.Shoe
 
+/**
+ * Object for mock data
+ */
 object MockData {
     val listOfShoe: List<Shoe> = listOf(
         Shoe(
