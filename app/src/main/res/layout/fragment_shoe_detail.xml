@@ -5,6 +5,7 @@
     tools:context=".presentation.onboarding.WelcomeFragment">
 
     <data>
+
         <import type="com.udacity.shoestore.utils.Converter" />
 
         <variable
