@@ -13,6 +13,10 @@
             type="com.udacity.shoestore.data.models.Shoe" />
     </data>
 
+    <!-- In this case, ConstraintLayout was chosen as main ViewGroup for positioning
+         because of screen complexity. There are buttons under the ScrollView that
+         the ScrollView should not overlap.
+         -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/shoe_detail_layout"
         android:layout_width="match_parent"
@@ -27,6 +31,11 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
+            <!-- LinearLayout in this case because it's needed to place views one by one
+                 in the vertical orientation without any constraints from ConstraintLayout.
+                 Also, it will be easier to modify the content of the layout if a new similar
+                 view will be added (eg. Price field).
+                 -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

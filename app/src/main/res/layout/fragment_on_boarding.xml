@@ -4,6 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".presentation.onboarding.WelcomeFragment">
 
+    <!-- In this case, ConstraintLayout was chosen because it's the easiest way
+         to achieve desired textView and button positioning on the screen.
+         The screen is split into two parts by constraint guideline with one
+         textView below and one textView above the guideline.
+         -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/welcome_layout"
         android:layout_width="match_parent"

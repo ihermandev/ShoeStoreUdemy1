@@ -9,6 +9,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
+import com.udacity.shoestore.BuildConfig
 import com.udacity.shoestore.R
 import com.udacity.shoestore.data.models.Shoe
 import com.udacity.shoestore.databinding.FragmentShoeDetailBinding
@@ -35,6 +36,10 @@ class ShoeDetailFragment : Fragment() {
             false
         )
 
+        if (BuildConfig.DEBUG) {
+            populateDefaultShoeData(userShoeData)
+        }
+
         binding.shoeItem = userShoeData
 
         binding.btnCancel.setOnClickListener { view: View ->
@@ -47,12 +52,24 @@ class ShoeDetailFragment : Fragment() {
                 view.findNavController()
                     .navigate(ShoeDetailFragmentDirections.actionShoeDetailFragmentToShoeListFragment())
             } else {
-                Toast.makeText(requireContext(), "Can't save empty fields", Toast.LENGTH_SHORT)
+                Toast.makeText(requireContext(), "Can't save empty fields or zero size", Toast.LENGTH_SHORT)
                     .show()
             }
         }
 
         return binding.root
+    }
+
+    /**
+     *  Pre-populate userShoeData for debug build
+     */
+    private fun populateDefaultShoeData(userShoeData: Shoe) {
+        userShoeData.apply {
+            name = "Puma RS"
+            company = "Puma"
+            size = 44.0
+            description = "For \uD83C\uDFC3\u200D"
+        }
     }
 
     /**
