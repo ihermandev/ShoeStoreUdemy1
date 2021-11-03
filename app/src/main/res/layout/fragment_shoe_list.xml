@@ -4,6 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".presentation.onboarding.WelcomeFragment">
 
+    <!-- In this case, the fab button should be placed in a fixed position in
+         the right bottom corner. The easiest way to achieve this is with the help of
+         ConstraintLayout or RelativeLayout. But the possible better performance of
+         RelativeLayout comparing to ConstraintLayout very questionable.
+         -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/shoe_list_layout"
         android:layout_width="match_parent"
@@ -19,6 +24,9 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
+            <!-- LinearLayout is the best choice for a list simulation,
+                 each child view will be placed one after the other
+                 -->
             <LinearLayout
                 android:id="@+id/shoeContainer"
                 android:layout_width="match_parent"

@@ -3,6 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- In this case, ConstraintLayout was chosen because of screen complexity,
+         This view consists of views like imageView, editText, button, progressBar with precise positioning.
+         Basically, this screen is split into two parts by constraint guideline with 40% horizontal
+         positioning of the screen. This guideline it's anchor points for other views.
+         -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/container"
         android:layout_width="match_parent"
@@ -109,14 +114,11 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginStart="32dp"
-            android:layout_marginTop="64dp"
             android:layout_marginEnd="32dp"
-            android:layout_marginBottom="64dp"
+            android:layout_marginBottom="8dp"
             android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="@+id/etPassword"
-            app:layout_constraintStart_toStartOf="@+id/etPassword"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.3" />
+            app:layout_constraintStart_toStartOf="@+id/etPassword" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
